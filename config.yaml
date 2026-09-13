@@ -1,0 +1,15 @@
+paths:
+  recordings: data/recordings
+  ground_truth: data/ground_truth.json
+  transcripts: out/transcripts
+  predictions: out/predictions.json
+
+asr:
+  model: gpt-4o-mini-transcribe
+  language: de
+
+llm:
+  model: gpt-5-nano
+  max_tokens: 2000
+  reasoning_effort: minimal
+  prompt_version: v2

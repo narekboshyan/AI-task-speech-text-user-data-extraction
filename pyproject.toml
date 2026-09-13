@@ -1,0 +1,24 @@
+[project]
+name = "phonebot"
+version = "0.1.0"
+description = "Contact extraction from German AI-phonebot call recordings"
+requires-python = ">=3.12"
+dependencies = [
+    "openai",
+    "pydantic>=2",
+    "pyyaml>=6",
+    "python-dotenv>=1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/phonebot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
